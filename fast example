@@ -1,0 +1,6 @@
+from paypal_integration.client import PayPalClient
+
+client = PayPalClient(client_id="VAŠ_CLIENT_ID", client_secret="VAŠ_SECRET")
+
+payment = client.create_payment(amount=50.0, currency="USD", description="Test plaćanje")
+print(payment)
